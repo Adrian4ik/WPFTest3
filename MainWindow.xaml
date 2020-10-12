@@ -1,0 +1,73 @@
+﻿<Window x:Class="WPFTest3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTest3"
+        mc:Ignorable="d"
+        Title="DeviceControl 2.1 - Устройства" Height="315" Width="555" MinWidth="555" MinHeight="315">
+    <Grid>
+        <Grid Margin="155,50,0,0">
+            <Grid.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Grid.Background>
+            <TabControl Margin="5,5,5,30" Grid.IsSharedSizeScope="True">
+                <TabItem Header="Общие">
+                    <Grid Background="White">
+                        <TextBlock HorizontalAlignment="Left" Margin="25,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
+                            <Run Text="Тип устройства"/><LineBreak/><LineBreak/>
+                            <Run Text="Время от включения"/><LineBreak/><LineBreak/>
+                            <Run Text="Системное имя"/><LineBreak/><LineBreak/>
+                            <Run Text="Местоположение"/><LineBreak/><LineBreak/>
+                            <Run Text="Системное время"/>
+                        </TextBlock>
+                        <TextBlock x:Name="tb_sysDescr" HorizontalAlignment="Left" Margin="190,10,0,0" Text="TextBlock" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="tb_sysUpTime" HorizontalAlignment="Left" Margin="190,42,0,0" Text="TextBlock" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="tb_sysName" HorizontalAlignment="Left" Margin="190,74,0,0" Text="TextBlock" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="tb_sysLocation" HorizontalAlignment="Left" Margin="190,106,0,0" Text="TextBlock" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="tb_SystemTime" HorizontalAlignment="Left" Margin="190,138,0,0" Text="TextBlock" VerticalAlignment="Top"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Интерфейсы" Background="{x:Null}">
+                    <Grid Background="White">
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Важные">
+                    <Grid Background="White">
+                        <TextBlock HorizontalAlignment="Left" Margin="25,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
+                            <Run Text="Температура текущая, °С"/><LineBreak/><LineBreak/>
+                            <Run Text="Температура максимально"/><LineBreak/>
+                            <Run Text="допустимая, °С"/><LineBreak/>
+                            <Run Text="Температура минимально"/><LineBreak/>
+                            <Run Text="допустимая, °С"/><LineBreak/>
+                            <Run Text="Питание"/></TextBlock>
+                        <TextBlock HorizontalAlignment="Left" Margin="25,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Доп. параметр 1"/>
+                        <TextBlock x:Name="tb_CurTemp" HorizontalAlignment="Left" Margin="190,10,0,0" Text="TextBlock" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="tb_MaxTemp" HorizontalAlignment="Left" Margin="190,42,0,0" Text="TextBlock" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="tb_MinTemp" HorizontalAlignment="Left" Margin="190,74,0,0" Text="TextBlock" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="190,138,0,0" Text="TextBlock" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="tb_Supply" HorizontalAlignment="Left" Margin="190,106,0,0" Text="TextBlock" VerticalAlignment="Top"/>
+
+                    </Grid>
+                </TabItem>
+            </TabControl>
+            <TextBlock Text="Последний раз обновлено:" Margin="0,0,0,5" VerticalAlignment="Bottom" HorizontalAlignment="Left" Padding="5,0,0,0"/>
+            <TextBlock HorizontalAlignment="Left" Margin="155,0,0,5" Text="TextBlock" VerticalAlignment="Bottom" Padding="4,0,0,0"/>
+        </Grid>
+        <Grid Width="155" HorizontalAlignment="Left">
+            <TabControl HorizontalAlignment="Left" Width="155">
+                <TabItem Header="Вкл" Margin="-2,-2,-2,0">
+                    <Grid Background="White"/>
+                </TabItem>
+                <TabItem Header="Выкл">
+                    <Grid Background="White"/>
+                </TabItem>
+            </TabControl>
+        </Grid>
+        <Image HorizontalAlignment="Left" Height="24" Margin="160,0,0,0" VerticalAlignment="Top" Width="24" Source="gray24.png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="190,-3,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" TextDecorations="Underline" Text="TextBlock" />
+        <TextBlock HorizontalAlignment="Left" Margin="190,25,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Right" Height="24" Margin="0,0,10,0" VerticalAlignment="Top" Width="24" Source="gray24.png"/>
+        <TextBlock HorizontalAlignment="Right" Margin="0,10,40,0" TextWrapping="Wrap" Text="Ping:" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
